@@ -79,10 +79,8 @@ int main(int argc,char **argv)
   printf("Nucelotides after position %d have mean window quality under %d\n",start,WinThres);
 
   // trim out the filter positions from
-  // the second and the last lines up to
-  strncpy(buffer[1],buffer[1],start);
+  // the second and the last lines up to start
   buffer[1][start+1]='\0';
-  strncpy(buffer[3],buffer[3],start);
   buffer[3][start+1]='\0';
 
   //write the filtered fastq to the output file
