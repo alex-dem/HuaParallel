@@ -81,9 +81,9 @@ int main(int argc,char **argv)
   // trim out the filter positions from
   // the second and the last lines up to
   strncpy(buffer[1],buffer[1],start);
-  buffer[1][start]='\0';
+  buffer[1][start+1]='\0';
   strncpy(buffer[3],buffer[3],start);
-  buffer[3][start]='\0';
+  buffer[3][start+1]='\0';
 
   //write the filtered fastq to the output file
   fprintf(Fout,"%s",buffer[0] );
